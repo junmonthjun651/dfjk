@@ -16,9 +16,9 @@ async def on_message(message):
     if message.content.startswith("/회원가입"):
         a = message.guild.get_member(int(message.author.id))
         b = discord.utils.get(message.guild.roles, name="회원")
-        await add_roles(b)
+        await add_roles(a, b)
         c = discord.utils.get(message.guild.roles, name="비회원")
-        await remove_roles(c)
+        await remove_roles(a, c)
     
 
     
