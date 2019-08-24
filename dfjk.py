@@ -14,7 +14,7 @@ async def on_ready():
 @client.event
 async def on_message(message):
     if message.content.startswith("/회원가입"):
-        await message.channel.send("권한을 하겠습니다.")
+        await message.channel.send("권한지급완료")
         author = message.guild.get_member(int(message.author.id))
         role = discord.utils.get(message.guild.roles, name="회원")
         await author.add_roles(role)
