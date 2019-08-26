@@ -15,11 +15,11 @@ async def on_ready():
 async def on_message(message):
     if message.content.startswith("/회원가입"):
         await message.channel.send("권한지급완료")
-        author = message.guild.get_member(int(message.author.id))
-        role = discord.utils.get(message.guild.roles, name="회원")
-        await author.add_roles(role)
-        role = discord.utils.get(message.guild.roles, name="비회원")
-        await author.remove_roles(role)
+        a = message.guild.get_member(int(message.author.id))
+        b = discord.utils.get(message.guild.roles, name="회원")
+        await a.add_roles(b)
+        c = discord.utils.get(message.guild.roles, name="비회원")
+        await author.remove_roles(c)
     
     
 
