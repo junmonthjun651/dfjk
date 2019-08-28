@@ -18,7 +18,7 @@ async def on_message(message):
         a = message.guild.get_member(int(message.author.id))
         b = discord.utils.get(message.guild.roles, name="회원")
         await a.add_roles(b)
-        c = discord.utils.get(message.guild.roles, name="비회원")
+         = discord.utils.get(message.guild.roles, name="비회원")
         await author.remove_roles(c)
     
     
