@@ -1,7 +1,7 @@
 import discord
 import asyncio
 import os
-
+#
 
 client = discord.Client()
 
@@ -14,12 +14,12 @@ async def on_ready():
 @client.event
 async def on_message(message):
     if message.content.startswith("/회원가입"):
-        await message.channel.send("권한지급완료")
         a = message.guild.get_member(int(message.author.id))
         b = discord.utils.get(message.guild.roles, name="회원")
         await a.add_roles(b)
         b = discord.utils.get(message.guild.roles, name="비회원")
-        await author.remove_roles(c)
+        await a.remove_roles(b)
+        await message.channel.send("권한지급완료")
     
     
 
